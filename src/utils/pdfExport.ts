@@ -18,7 +18,7 @@ export async function exportToPdf(
     onProgress?.('Capturing stamp paper and draft layers at 300 DPI...');
     const dataUrl = await toPng(element, {
       pixelRatio: 2.5,
-      backgroundColor: '#f9f6ef',
+      backgroundColor: '#f8f5eb',
       cacheBust: true,
       skipAutoScale: true,
       filter: (node) => {

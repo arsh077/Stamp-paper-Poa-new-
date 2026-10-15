@@ -9,34 +9,37 @@ export const StampPaperVector: React.FC<StampPaperVectorProps> = ({ config }) =>
   const { serialNumber, stampDate, state, stateHindi, denomination, showPerforations } = config;
 
   return (
-    <div className="relative w-full select-none bg-transparent" style={{ height: '395px' }}>
-      {/* 1. AUTHENTIC HIGH-RES INDIAN ₹500 STAMP PAPER HEADER (SEAMLESSLY MERGED) */}
-      <div className="relative w-full h-[345px] overflow-hidden pt-2 px-2.5">
+    <div className="relative w-full select-none bg-transparent" style={{ height: '435px' }}>
+      {/* 1. AUTHENTIC HIGH-RES INDIAN ₹500 STAMP PAPER HEADER (100% MATCHED TO FULL A4 SHEET) */}
+      <div className="relative w-full h-[390px] overflow-hidden">
+        {/* Selected target element: Perfectly mapped to the full sheet background */}
         <img
-          src="/stamp-assets/authentic_stamp_500.jpg"
+          src="/stamp-assets/full_stamp_paper_a4.jpg"
           alt="Government of India ₹500 Non-Judicial Stamp Paper"
-          className="w-full h-full object-fill rounded-xs"
+          className="w-full object-cover object-top pointer-events-none"
           style={{
-            mixBlendMode: 'multiply',
-            filter: 'contrast(1.02) saturate(1.02)',
-            WebkitMaskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
-            maskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
+            height: '1123px',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            opacity: 0, // Reveals the 100% continuous full-sheet background with zero seam or color shift
           }}
         />
 
         {/* 2. OFFICIAL PURPLE TREASURY OVAL STAMP SEAL WITH EDITABLE DATE */}
         <div
-          className="absolute left-[65px] top-[32px] pointer-events-none select-none"
+          className="absolute left-[55px] top-[40px] pointer-events-none select-none"
           style={{ transform: 'rotate(-13deg)' }}
         >
           <div
-            className="w-[185px] h-[118px] rounded-[50%] border-[3.5px] border-purple-800 bg-purple-100/35 backdrop-blur-2xs flex flex-col items-center justify-center p-2 shadow-xs"
+            className="w-[188px] h-[118px] rounded-[50%] border-[3.5px] border-purple-800 bg-purple-100/35 backdrop-blur-2xs flex flex-col items-center justify-center p-2 shadow-xs"
             style={{
               borderColor: '#581c87',
               boxShadow: 'inset 0 0 10px rgba(88, 28, 135, 0.22)',
             }}
           >
-            <div className="w-[166px] h-[100px] rounded-[50%] border border-purple-700/80 flex flex-col items-center justify-between py-1">
+            <div className="w-[170px] h-[100px] rounded-[50%] border border-purple-700/80 flex flex-col items-center justify-between py-1">
               {/* Hindi seal text top */}
               <span className="text-[10px] font-bold text-purple-950 tracking-wider mt-0.5">
                 चक भारतीय गैर न्यायिक

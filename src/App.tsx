@@ -73,12 +73,12 @@ export default function App() {
     freeDraftText: defaultTemplate.freeDraftText,
     layout: {
       topOffsetMm: 98,
-      fontSizePt: 9.7,
-      lineHeight: 1.30,
+      fontSizePt: 9.4,
+      lineHeight: 1.28,
       fontFamily: 'EB Garamond',
       leftMarginMm: 18,
       rightMarginMm: 15,
-      bottomMarginMm: 10,
+      bottomMarginMm: 8,
       textAlign: 'justify',
     },
   });

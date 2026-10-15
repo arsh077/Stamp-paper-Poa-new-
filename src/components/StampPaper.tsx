@@ -52,10 +52,16 @@ export const StampPaper: React.FC<StampPaperProps> = ({
           width: '794px',
           height: '1123px',
           fontFamily: layout.fontFamily || 'Times New Roman, serif',
-          backgroundColor: '#f9f6ef',
-          backgroundImage: "url('/stamp-assets/paper_texture.jpg')",
+          backgroundColor: '#f8f5eb',
+          backgroundImage:
+            stampConfig.bgMode === 'authentic_vector'
+              ? "url('/stamp-assets/full_stamp_paper_a4.jpg')"
+              : stampConfig.customBgImage
+              ? `url('${stampConfig.customBgImage}')`
+              : "url('/stamp-assets/full_stamp_paper_a4.jpg')",
           backgroundSize: '100% 100%',
           backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'top center',
         }}
         className="relative shadow-2xl text-slate-950 overflow-hidden flex flex-col justify-between"
       >
