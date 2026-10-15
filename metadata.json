@@ -1,0 +1,6 @@
+{
+  "name": "Trademarkapply - Stamp Paper Draft & PDF Studio",
+  "description": "Merge legal drafts (Form TM-48, copyright, power of attorney) directly onto Indian non-judicial stamp papers with custom date, stamp number, and 1-page PDF download.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
